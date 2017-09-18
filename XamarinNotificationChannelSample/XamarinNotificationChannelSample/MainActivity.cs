@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using System;
 
 namespace XamarinNotificationChannelSample
 {
@@ -22,8 +23,16 @@ namespace XamarinNotificationChannelSample
 
         private void BtnSendNotification_Click(object sender, System.EventArgs e)
         {
-            var myNotification = myNoti.notification("Test", "Hey! This is a test notification, did you notice the red dot");
-            myNoti.notify(1000, myNotification);
+            try
+            {
+                myNoti = new NotificationHelper();
+                var myNotification = myNoti.notification("Test", "Hey! This is a test notification, did you notice the blue dot");
+                myNoti.notify(1000, myNotification);
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+            }
         }
     }
 }

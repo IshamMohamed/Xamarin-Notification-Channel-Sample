@@ -18,10 +18,9 @@ namespace XamarinNotificationChannelSample
         private NotificationManager nManager;
         const string CHANNEL = "MyNotificationChannel";
 
-        public NotificationHelper(Context cntx)
+        public NotificationHelper()
         {
             NotificationChannel nChannel = new NotificationChannel(CHANNEL, "My First Channel", NotificationImportance.High);
-            nChannel.Group = "XAPP_CHANNEL_GROUP";
             nChannel.EnableVibration(true);
             nChannel.SetShowBadge(true);
 
@@ -33,7 +32,7 @@ namespace XamarinNotificationChannelSample
             return new Notification.Builder(Application.Context, CHANNEL)
                 .SetContentTitle(title)
                 .SetContentText(text)
-                .SetGroup("XAPP_CHANNEL_GROUP")
+                .SetSmallIcon(Resource.Mipmap.ic_launcher)
                 .SetAutoCancel(true);
         }
 

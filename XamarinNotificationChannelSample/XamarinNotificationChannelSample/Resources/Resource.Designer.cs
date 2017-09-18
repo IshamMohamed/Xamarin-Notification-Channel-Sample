@@ -44,8 +44,8 @@ namespace XamarinNotificationChannelSample
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int buttonSendNotification = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int buttonSendNotification = 2131034112;
 			
 			static Id()
 			{
@@ -60,8 +60,8 @@ namespace XamarinNotificationChannelSample
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int Main = 2130837504;
+			// aapt resource value: 0x7f030000
+			public const int Main = 2130903040;
 			
 			static Layout()
 			{
@@ -73,11 +73,27 @@ namespace XamarinNotificationChannelSample
 			}
 		}
 		
+		public partial class Mipmap
+		{
+			
+			// aapt resource value: 0x7f020000
+			public const int ic_launcher = 2130837504;
+			
+			static Mipmap()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Mipmap()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int app_name = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int app_name = 2130968576;
 			
 			static String()
 			{
